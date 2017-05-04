@@ -1,16 +1,15 @@
 "use strict"
 
 class Boggle {
-  constructor(number) {
-    this.number = number;
+  constructor() {
   }
 
-  shake() {
+  shake(number) {
     let board = [];
 
-    for(let i = 0; i < this.number; i++) {
+    for(let i = 0; i < number; i++) {
       board[i] = [];
-      for(let j = 0; j < this.number; j++) {
+      for(let j = 0; j < number; j++) {
         board[i][j] = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
       }
     }
@@ -18,6 +17,6 @@ class Boggle {
   }
 }
 
-let boggle = new Boggle(4);
+let boggle = new Boggle();
 
-console.log(boggle.shake());
+console.log(boggle.shake(4));
