@@ -18,7 +18,7 @@ class BoggleBoard {
 
   board(board) {
     let printBoard = "";
-    let dashLine = "-----------------"
+    let dashLine = "-".repeat(board.length*4+1)
     printBoard += dashLine+"\n";
     for (let i=0; i<board.length;i++){
       printBoard += "| ";
