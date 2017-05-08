@@ -1,17 +1,16 @@
 class BoggleBoard {
-  constructor() {
+  constructor(len) {
     this.init();
     this._line = '\n==============';
   }
   init() {
     this._words = [];
-    this.shake();
+    // this.shake();
   }
-  shake() {
-
-    for (let h = 0; h < 4; h++){
+  shake(len) {
+    for (let h = 0; h < len; h++){
       let baris = [];
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < len; i++) {
         let num = Math.floor( (Math.random() * 26) +97);
         baris.push(String.fromCharCode(num))
       }
@@ -33,4 +32,5 @@ class BoggleBoard {
 
 
 let bb = new BoggleBoard();
+bb.shake(3);
 bb.print_board();
